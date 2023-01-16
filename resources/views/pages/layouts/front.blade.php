@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Prodi Seni</title>
-    <link rel="icon" href="{{ asset('assets/frontemplate') }}/img/favicon.png">
+    <link rel="icon" href="{{ asset('assets/frontemplate') }}/img/icon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/frontemplate') }}/css/bootstrap.min.css">
     <!-- animate CSS -->
