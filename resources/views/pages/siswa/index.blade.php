@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Universitas Teknologi Sumbawa')
+@section('title', 'SMKN 1 Sumbbawa')
 
 @section('content')
 
@@ -10,17 +10,17 @@
       <div class="header-body">
         <div class="row align-items-center py-4">
           <div class="col-lg-6 col-7">
-            <h6 class="h2 text-white d-inline-block mb-0">Data Mahasiswa</h6>
+            <h6 class="h2 text-white d-inline-block mb-0">Siswa</h6>
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
               <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                 <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                 {{-- <li class="breadcrumb-item"><a href="#">Tables</a></li> --}}
-                <li class="breadcrumb-item active" aria-current="page">Data Mahasiswa</li>
+                <li class="breadcrumb-item active" aria-current="page">Data Siswa</li>
               </ol>
             </nav>
           </div>
           <div class="col-lg-6 col-5 text-right">
-            <a href="{{ route('siswa.create') }}" class="btn btn-md btn-neutral">Tambah Mahasiswa</a>
+            <a href="{{ route('siswa.create') }}" class="btn btn-md btn-neutral">Tambah Siswa</a>
           </div>
         </div>
       </div>

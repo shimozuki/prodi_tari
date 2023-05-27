@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Login | Ujian Online SMAN 2 Baubau</title>
+    <title>Login | SMKN 1 Sumbawa</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/img/brand/favicon.png') }}" type="image/png">
     <!-- Fonts -->
@@ -61,7 +61,7 @@
                 </div>
                 <form action="/login" method="POST">
                   @csrf
-                  <img src="{{ asset('/assets/img/UTS-OFFICIAL.png') }}" style="width:150px;height:150px;position:center;">
+                  <img src="{{ asset('/assets/img/Logo-SMKN-1.png') }}" style="width:150px;height:150px;position:center;">
                   <p class="text-danger text-center">{{ Session::get('error') }}</p>
                   <div class="form-group mb-3">
                     <div class="input-group input-group-merge input-group-alternative">

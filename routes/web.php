@@ -17,6 +17,7 @@ use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\MateriCOntroller;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\BeljarController;
+use App\Http\Controllers\BlogController;
 
 
 /*
@@ -34,7 +35,7 @@ use App\Http\Controllers\BeljarController;
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout']);
-Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/', [AuthController::class, 'login']);
 Route::get('/about', 'front\WelcomeController@about')->name('about');
 Route::get('/belajar', [BeljarController::class, 'index'])->name('kelasb');
 Route::get('/belajar/detail/{id}', [BeljarController::class, 'detail'])->name('kelasb.detail');
@@ -70,4 +71,13 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin,kepsek,guru,siswa']], fun
 
     Route::get('/nilai-siswa', [NilaiController::class, 'index'])->name('nilai-siswa');
     Route::get('/nilai-siswa/{id}', [NilaiController::class, 'nilai'])->name('daftar-nilai-siswa');
+
+    //Blog
+    Route::get('/admin/blog', [BlogController::class, 'index'])->name('admin.blog');
+    Route::get('/admin/blog/tambah', [BlogController::class, 'tambah'])->name('admin.blog.tambah');
+    Route::post('/admin/blog/simpan', [BlogController::class,'simpan'])->name('admin.blog.simpan');
+    Route::get('/admin/blog/hapus/{id}', [BlogController::class,'hapus'])->name('admin.blog.hapus');
+    Route::get('/admin/blog/detail/{id}', [BlogController::class,'detail'])->name('admin.blog.detail');
+    Route::get('/admin/blog/edit/{id}', [BlogController::class,'edit'])->name('admin.blog.edit');
+    Route::post('/admin/blog/update/{id}', [BlogController::class,'update'])->name('admin.blog.update');
 });

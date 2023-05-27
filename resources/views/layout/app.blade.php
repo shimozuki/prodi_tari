@@ -36,6 +36,7 @@
    @include('sweetalert::alert')
    @include('include.script')
    @stack('addon-script')
+   <script src="https://cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
  </body>
  
  </html>

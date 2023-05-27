@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Mata Pelajaran | Ujian Online SMA 2 Baubau')
+@section('title', 'Mata Pelajaran | SMKN 1 Sumbbawa')
 
 @section('content')
 

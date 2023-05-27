@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Edit Siswa | Ujian Online SMAN 2 Baubau')
+@section('title', 'Edit Siswa | SMKN 1 Sumbbawa')
 
 @section('content')
 <!-- Header -->

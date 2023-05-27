@@ -4,7 +4,7 @@
     <!-- Brand -->
     <div class="sidenav-header d-flex align-items-center">
       <a href="/">
-        <img src="{{ asset('/assets/img/logo.png') }}" style="width:64%;height:64%;margin-left:10%;">
+        <img src="{{ asset('/assets/img/logo-kecil-text_revisi-min.png') }}" style="width:74%;height:64%;margin-left:10%;">
       </a>
       <div class="ml-auto">
         <!-- Sidenav toggler -->
@@ -24,20 +24,36 @@
         <ul class="navbar-nav">
           @if (auth()->user()->level == 'admin')
           <li class="nav-item">
-            <a class="nav-link {{Request::is('/') ? 'active' : ''}}" href="/">
+            <a class="nav-link {{Request::is('/home') ? 'active' : ''}}" href="/home">
               <i class="ni ni-shop text-primary"></i>
               <span class="nav-link-text">Dashboard</span>
             </a>
           </li>
-          <li class="{{Request::path() == 'admin/kelas' ? 'active' : '' }}">
+          <li class="nav-item">
+            <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
+              <i class="fas fa-university"></i>
+              <span class="nav-link-text">Data Ujian</span>
+            </a>
+            <div class="collapse" id="navbar-forms">
+              <ul class="nav nav-sm flex-column">
+                <li class="{{Request::path() == 'admin/kelas' ? 'active' : '' }}">
+                  <a href="{{ route('admin.kelas') }}" class="nav-link">Materi Praktikum</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.blog') }}" class="nav-link">Materi Teori</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li class="{{Request::path() == 'admin/blog' ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('admin.kelas') }}">
               <i class="fas fa-university"></i><span>materi</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link {{Request::is('guru') ? 'active' : ''}}" href="/guru">
               <i class="fas fa-user-tie text-red"></i>
-              <span class="nav-link-text">Dosen</span>
+              <span class="nav-link-text">Guru</span>
             </a>
           </li>
           <li class="nav-item">
@@ -49,7 +65,7 @@
           <li class="nav-item">
             <a class="nav-link {{Request::is('siswa') ? 'active' : ''}}" href="/siswa">
               <i class="fas fa-users text-yellow"></i>
-              <span class="nav-link-text">Mahasiswa</span>
+              <span class="nav-link-text">Siswa</span>
             </a>
           </li>
           <li class="nav-item">
