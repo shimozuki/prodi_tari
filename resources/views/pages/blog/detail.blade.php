@@ -5,6 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>{{ $blog->name_blog }}</h4>
+                @if (auth()->user()->level == 'admin' || auth()->user()->level == 'guru')
                 <div class="card-header-action">
                     <a href="{{ route('admin.blog.edit',Crypt::encrypt($blog->id)) }}"
                         class="btn btn-warning">Edit</a>
@@ -14,6 +15,7 @@
                         Kembali
                     </button>
                 </div>
+                @endif
             </div>
             <div class="card-body">
                 <div class="row">

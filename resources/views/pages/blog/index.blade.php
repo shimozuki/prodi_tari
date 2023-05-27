@@ -5,11 +5,13 @@
         <div class="card">
             <div class="card-header">
                 <h4>Data Materi Teori</h4>
+                @if (auth()->user()->level == 'admin' || auth()->user()->level == 'guru')
                 <div class="card-header-action">
                     <a href="{{ route('admin.blog.tambah') }}" class="btn btn-primary">
                         Tambah
                     </a>
                 </div>
+                @endif
             </div>
             <div class="card-body">
                 <div class="table-responsive">
