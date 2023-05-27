@@ -32,7 +32,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
               <i class="fas fa-university"></i>
-              <span class="nav-link-text">Data Ujian</span>
+              <span class="nav-link-text">Data Materi</span>
             </a>
             <div class="collapse" id="navbar-forms">
               <ul class="nav nav-sm flex-column">
